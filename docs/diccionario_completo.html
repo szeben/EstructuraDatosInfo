@@ -1,0 +1,2419 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario Completo - Infocent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        .pk { color: #f87171; font-weight: bold; }
+        .fk { color: #4ade80; font-weight: bold; }
+        .search-container { position: sticky; top: 0; background: var(--bg-dark); padding: 1rem 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diccionario Universal de Datos</h1>
+        <p style="color: var(--text-muted);">16 Tablas Documentadas</p>
+    </header>
+
+    <div class="container">
+        <nav><a href="index.html">Resumen</a><a href="relaciones.html">Entidad-Relación</a></nav>
+
+        <div class="search-container">
+            <input type="text" id="masterSearch" class="search-box" placeholder="Buscar por nombre de tabla..." onkeyup="filter()">
+        </div>
+
+        <div id="tableList">
+            
+        <div class="table-card table-item" id="EO_CARGO" data-name="EO_CARGO" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🏢 AMCOR.EO_CARGO</h3>
+                <span class="table-tag">Estructura</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID_EMPRESA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOMBRE</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_CLASIFICA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_CARGO_SUP</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">UNCION</span></td>
+                <td>VARCHAR2 (1024 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ROPOSITO</span></td>
+                <td>VARCHAR2 (1024 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="EO_EMPRESA" data-name="EO_EMPRESA" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🏢 AMCOR.EO_EMPRESA</h3>
+                <span class="table-tag">Estructura</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOMBRE</span></td>
+                <td>VARCHAR2 (70 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PUBLICA</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ITAL_PAG</span></td>
+                <td>NUMBER (25,9)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ITAL_SUB</span></td>
+                <td>NUMBER (25,9)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">1</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">2</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">E</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSTAL</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ONO1</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ONO2</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">AX</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AGINA_WEB</span></td>
+                <td>VARCHAR2 (60 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">E_FUNDA</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">E_INICIO</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ILEMAIL</span></td>
+                <td>VARCHAR2 (60 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="EO_PERSONA" data-name="EO_PERSONA" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🏢 AMCOR.EO_PERSONA</h3>
+                <span class="table-tag">Estructura</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>NUMBER (20)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOMBRE1</span></td>
+                <td>VARCHAR2 (17 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">APELLIDO1</span></td>
+                <td>VARCHAR2 (17 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ELLIDO2</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_TIPO_IDEN</span></td>
+                <td>VARCHAR2 (2 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NACIONAL</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ASAPORTE</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FECHA_NA</span></td>
+                <td>DATE</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">E_NA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS_NA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SEXO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ZURDO</span></td>
+                <td>NUMBER (1)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">O_SANGRE</span></td>
+                <td>VARCHAR2 (2 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ACTOR_RH</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">E</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ARROQUIA</span></td>
+                <td>VARCHAR2 (64 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">IO</span></td>
+                <td>VARCHAR2 (64 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSTAL</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ONO1</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ONO2</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">AX</span></td>
+                <td>VARCHAR2 (15 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">OTO</span></td>
+                <td>VARCHAR2 (128 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="NMM019" data-name="NMM019" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📊 AMCOR.NMM019</h3>
+                <span class="table-tag">Nómina</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CIA_CODCIA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">TNOM_TIPNOM</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ROC_TIPPRO</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_SUBPRO</span></td>
+                <td>NUMBER (1)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_ANOCAL</span></td>
+                <td>NUMBER (4)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_NUMPER</span></td>
+                <td>NUMBER (3)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">USERMO</span></td>
+                <td>VARCHAR2 (30 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">MODMOV</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">SECMOV</span></td>
+                <td>NUMBER (7)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">SUBSEC</span></td>
+                <td>NUMBER (7)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TRAB_SUBTIP</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">TRAB_FICTRA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTO_CODCTO</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANMOV</span></td>
+                <td>NUMBER (14,7)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MONMOV</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUEVIE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPSUE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECMOV</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">TRAB_FICSUS</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">TABU_CODTAB</span></td>
+                <td>VARCHAR2 (6 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">VALSUS</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACSUS</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOSUMA</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">YACONT</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ALT</span></td>
+                <td>VARCHAR2 (16 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">E</span></td>
+                <td>VARCHAR2 (6 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ABONAR</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_MOTIVO_HE</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="NMT027" data-name="NMT027" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📊 AMCOR.NMT027</h3>
+                <span class="table-tag">Nómina</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CIA_CODCIA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">TNOM_TIPNOM</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">CODCTO</span></td>
+                <td>NUMBER (4)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DESCTO</span></td>
+                <td>VARCHAR2 (30 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FUNCTO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PRIEJE</span></td>
+                <td>NUMBER (4)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MANSAL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOAFE</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPCAL</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">IS</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">VALCTO</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUEVAL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROVAL</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SERVAL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">VALMES</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPSUE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_CODPRO</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUSSUE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROSUS</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACCTO</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUEFAC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROFAC</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SERFAC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACMES</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">AC</span></td>
+                <td>VARCHAR2 (256 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANCTO</span></td>
+                <td>NUMBER (7,3)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUECAN</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROCA1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SERCAN</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROCAN</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANMES</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANDIA</span></td>
+                <td>NUMBER (1)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CONLIM</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANLID</span></td>
+                <td>NUMBER (7,3)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CANLIH</span></td>
+                <td>NUMBER (7,3)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROLI1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">LIMINF</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">LIMSUP</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">LIMSUE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">PROM_PROLIM</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROPE1</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROPE2</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROPE3</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROPE4</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROPE5</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">AUTPRO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROFIJ</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CONEXC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PROANI</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">EA</span></td>
+                <td>NUMBER (1)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FIJING</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">AFEREG</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">POSVAC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CONABO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CALABO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CONCUO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOPRO</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DIFCON</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DISCEN</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DISCON</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSRE1</span></td>
+                <td>VARCHAR2 (36 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSRE2</span></td>
+                <td>VARCHAR2 (36 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOFIJ</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOINT</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NONETO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOIMPR</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MANINS</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ACAHO</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOAHO</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">UNASUP</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">CTOSUP</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">GRAIMP</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SINDEC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ACIMP</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TOPSUE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TOPVAL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TOPFAC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TOPCAN</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">BUSSUC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">BUSSUF</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">BUSSUV</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUECAC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUECAF</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUECAV</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUELIM</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TOPMON</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">INCDET</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ABOPRE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RE</span></td>
+                <td>NUMBER (4)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CAPINT</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ACUCHE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CRETRO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">GRETRO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIN</span></td>
+                <td>NUMBER (3)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIS</span></td>
+                <td>NUMBER (3)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIV</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIC</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIF</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SALMIL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACAFE</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACFIJ</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FACCEN</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MONTOCERO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">INACTIVO</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">SUSCUOTA</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="NMT033" data-name="NMT033" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📊 AMCOR.NMT033</h3>
+                <span class="table-tag">Nómina</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CIA_CODCIA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">TNOM_TIPNOM</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ROC_TIPPRO</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">SUBPRO</span></td>
+                <td>NUMBER (1)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ANOCAL</span></td>
+                <td>NUMBER (4)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">NUMPER</span></td>
+                <td>NUMBER (3)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ER</span></td>
+                <td>VARCHAR2 (30 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FECINI</span></td>
+                <td>DATE</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FECFIN</span></td>
+                <td>DATE</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECPAG</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MESCAL</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NUMNOM</span></td>
+                <td>NUMBER (1)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ULTNOM</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FORPAG</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ESTPER</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">PRORET</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECSAL</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_TIPPRO</span></td>
+                <td>NUMBER (2)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_SUBPRO</span></td>
+                <td>NUMBER (1)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_ANOCAL</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_NUMPER</span></td>
+                <td>NUMBER (3)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">COM</span></td>
+                <td>VARCHAR2 (2 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCOM</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">FUNDIF</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">DIF</span></td>
+                <td>VARCHAR2 (2 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECDIF</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ACDIF</span></td>
+                <td>NUMBER (22,10)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_TIPPR1</span></td>
+                <td>NUMBER (2)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_SUBPR1</span></td>
+                <td>NUMBER (1)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_ANOCA1</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">FPRO_NUMPE1</span></td>
+                <td>NUMBER (3)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">STAT_CODSTA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">BUSCOL</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECIND</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECINH</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECRED</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECREH</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">UNITIE</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIEFRC</span></td>
+                <td>NUMBER (5)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DIAING</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">DIARET</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPFED</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPFEF</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPFEH</span></td>
+                <td>NUMBER (2)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECHA1</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECHA2</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECHA3</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECESQ</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECRET</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">INANI</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSCOM</span></td>
+                <td>VARCHAR2 (36 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">OSDIF</span></td>
+                <td>VARCHAR2 (36 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="NMT037" data-name="NMT037" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📊 AMCOR.NMT037</h3>
+                <span class="table-tag">Nómina</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CIA_CODCIA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">TNOM_TIPNOM</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ROC_TIPPRO</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_SUBPRO</span></td>
+                <td>NUMBER (1)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_ANOCAL</span></td>
+                <td>NUMBER (4)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RO_NUMPER</span></td>
+                <td>NUMBER (3)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">SUBTIP</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ICTRA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="NM_RELACION_PAGO" data-name="NM_RELACION_PAGO" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📊 AMCOR.NM_RELACION_PAGO</h3>
+                <span class="table-tag">Nómina</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID_EMPRESA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ICHA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_NOMINA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_GRUPO</span></td>
+                <td>VARCHAR2 (2 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_ROTACION</span></td>
+                <td>NUMBER (2)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_DIS_NOMINA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">CION</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PROCESO</span></td>
+                <td>NUMBER (2)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">SUB_PROCESO</span></td>
+                <td>NUMBER (1)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ANO_PERIODO</span></td>
+                <td>NUMBER (4)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">NRO_PERIODO</span></td>
+                <td>NUMBER (3)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_DESCANSO</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="RS_CV" data-name="RS_CV" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">👥 AMCOR.RS_CV</h3>
+                <span class="table-tag">Reclutamiento</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>NUMBER (10)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PERSONA</span></td>
+                <td>NUMBER (20)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">IRA</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">IRA</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ONIBLE</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ERIENCIA</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">C</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS_PREFE1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">REFE1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS_PREFE2</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">REFE2</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS_PREFE3</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">REFE3</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ESO</span></td>
+                <td>NUMBER (5,2)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">O_VIVIENDA</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ICADO_JUDICIAL</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="RS_REQUISICION" data-name="RS_REQUISICION" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">👥 AMCOR.RS_REQUISICION</h3>
+                <span class="table-tag">Reclutamiento</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>NUMBER (10)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">RESA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PERSONA</span></td>
+                <td>NUMBER (20)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">AIS</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ER</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ERSONAS_REQ</span></td>
+                <td>NUMBER (3)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">EC_SOLICITUD</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">C</span></td>
+                <td>VARCHAR2 (50 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="SPI_USUARIO" data-name="SPI_USUARIO" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🛡️ AMCOR.SPI_USUARIO</h3>
+                <span class="table-tag">Seguridad</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID</span></td>
+                <td>VARCHAR2 (60 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PERSONA</span></td>
+                <td>NUMBER (20)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">CLAVE_ACCESO</span></td>
+                <td>VARCHAR2 (150 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">REG_SECRETA</span></td>
+                <td>VARCHAR2 (60 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">_SECRETA</span></td>
+                <td>VARCHAR2 (32 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PERFIL</span></td>
+                <td>VARCHAR2 (32 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PAIS</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">ID_ACCESO</span></td>
+                <td>VARCHAR2 (150 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECHA_ACCE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="SS_ROL_OPCION" data-name="SS_ROL_OPCION" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🛡️ AMCOR.SS_ROL_OPCION</h3>
+                <span class="table-tag">Seguridad</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID_ROL</span></td>
+                <td>VARCHAR2 (30 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID_SISTEMA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID_MODULO</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID_OPCION</span></td>
+                <td>VARCHAR2 (30 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="">AUTORIZA_INS</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">AUTORIZA_ACT</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">AUTORIZA_ELI</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="SS_USUARIO_UNIDAD" data-name="SS_USUARIO_UNIDAD" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">🛡️ AMCOR.SS_USUARIO_UNIDAD</h3>
+                <span class="table-tag">Seguridad</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID_USUARIO</span></td>
+                <td>VARCHAR2 (60 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID_EMPRESA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ID_UNIDAD</span></td>
+                <td>VARCHAR2 (16 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="TA_PLANES_COBERTURAS" data-name="TA_PLANES_COBERTURAS" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📋 AMCOR.TA_PLANES_COBERTURAS</h3>
+                <span class="table-tag">Maestras</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CODE_PLAN</span></td>
+                <td>NUMBER (20)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">CODE_COBERTURA</span></td>
+                <td>NUMBER (20)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">MONTO_COBERTURA</span></td>
+                <td>NUMBER (25,9)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="TA_PRIMA_PLAN" data-name="TA_PRIMA_PLAN" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📋 AMCOR.TA_PRIMA_PLAN</h3>
+                <span class="table-tag">Maestras</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">CODE_PK</span></td>
+                <td>NUMBER (20)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">NOMBRE</span></td>
+                <td>VARCHAR2 (64 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="">TIPO</span></td>
+                <td>VARCHAR2 (32 BYTE)</td>
+                <td> </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        <div class="table-card table-item" id="TA_RELACION_LABORAL" data-name="TA_RELACION_LABORAL" style="margin-top: 3rem;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3 style="color: var(--accent); margin:0;">📋 AMCOR.TA_RELACION_LABORAL</h3>
+                <span class="table-tag">Maestras</span>
+            </div>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Constraint</th></tr>
+                </thead>
+                <tbody>
+            <tr>
+                <td><span class="pk">ID_EMPRESA</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ICHA</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td>PRIMARY KEY FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PERSONA</span></td>
+                <td>NUMBER (20)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_INGRESO</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_CORPORACION</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_AJUSTADA1</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_AJUSTADA2</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_AJUSTADA3</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_LOCALIDAD</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_CATEGORIA1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_CATEGORIA2</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_CATEGORIA3</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_SINDICATO</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_RETIRO</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_FINIQUITO</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_CONTRATO</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_PROFESION</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">_GRADUACION</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_NIVEL_EDU</span></td>
+                <td>VARCHAR2 (1 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">ROBADO</span></td>
+                <td>NUMBER (2)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ID_GRADO</span></td>
+                <td>VARCHAR2 (6 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECCRE</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ECACT</span></td>
+                <td>DATE</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">ICHA_JEFE</span></td>
+                <td>VARCHAR2 (10 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">HORARIO1</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">HORARIO2</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">HORARIO3</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">HORARIO4</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="fk">HORARIO5</span></td>
+                <td>VARCHAR2 (4 BYTE)</td>
+                <td> FOREIGN KEY</td>
+            </tr>
+        
+            <tr>
+                <td><span class="pk">P</span></td>
+                <td>VARCHAR2 (16 BYTE)</td>
+                <td>PRIMARY KEY </td>
+            </tr>
+        </tbody>
+            </table>
+        </div>
+        
+        </div>
+    </div>
+
+    <script>
+        function filter() {
+            let q = document.getElementById('masterSearch').value.toUpperCase();
+            let cards = document.getElementsByClassName('table-card');
+            for(let card of cards) {
+                let name = card.getAttribute('data-name');
+                card.style.display = name.includes(q) ? "block" : "none";
+            }
+        }
+    </script>
+</body>
+</html>

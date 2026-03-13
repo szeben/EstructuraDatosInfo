@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diccionario de Datos - BD Infocent</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <style>
+        .search-box {
+            width: 100%;
+            padding: 1rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: white;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+        .table-section {
+            display: none;
+            margin-bottom: 3rem;
+        }
+        .table-section.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diccionario de Datos</h1>
+        <p style="color: var(--text-muted);">Estructura detallada de Tablas y Campos</p>
+    </header>
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Resumen</a>
+            <a href="diccionario.html">Diccionario de Datos</a>
+            <a href="relaciones.html">Entidad-Relación</a>
+        </nav>
+
+        <input type="text" id="searchInput" class="search-box" placeholder="Buscar tabla o campo (ej. EO_PERSONA)..." onkeyup="filterTables()">
+
+        <!-- Tabla: EO_PERSONA -->
+        <div class="table-card table-item active" data-name="EO_PERSONA">
+            <h3 style="color: var(--accent);">AMCOR.EO_PERSONA</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Maestro central de información personal de empleados y familiares.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Tipo</th>
+                        <th>Descripción / Constraint</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">ID</span></td><td>NUMBER (20)</td><td>Identificador único de la persona (Primary Key)</td></tr>
+                    <tr><td>NOMBRE1</td><td>VARCHAR2 (17)</td><td>Primer nombre</td></tr>
+                    <tr><td>APELLIDO1</td><td>VARCHAR2 (17)</td><td>Primer apellido</td></tr>
+                    <tr><td>ID_TIPO_IDEN</td><td>VARCHAR2 (2)</td><td><span class="fk">FK</span> a EO_TIPO_IDENTIFICACION</td></tr>
+                    <tr><td>FECHA_NA</td><td>DATE</td><td>Fecha de nacimiento</td></tr>
+                    <tr><td>SEXO</td><td>VARCHAR2 (1)</td><td>Género (M/F)</td></tr>
+                    <tr><td>EDO_CIVIL</td><td>VARCHAR2 (30)</td><td>Estado civil</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla: EO_EMPRESA -->
+        <div class="table-card table-item active" data-name="EO_EMPRESA" style="margin-top: 3rem;">
+            <h3 style="color: var(--accent);">AMCOR.EO_EMPRESA</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Definición de entidades legales del grupo.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Tipo</th>
+                        <th>Descripción / Constraint</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">ID</span></td><td>VARCHAR2 (4)</td><td>Código de la empresa</td></tr>
+                    <tr><td>NOMBRE</td><td>VARCHAR2 (70)</td><td>Razón social completa</td></tr>
+                    <tr><td>RIF1</td><td>VARCHAR2 (15)</td><td>Registro de Información Fiscal</td></tr>
+                    <tr><td>FE_INICIO</td><td>DATE</td><td>Fecha de inicio de operaciones</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla: NMM019 -->
+        <div class="table-card table-item active" data-name="NMM019" style="margin-top: 3rem;">
+            <h3 style="color: var(--accent);">AMCOR.NMM019</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Movimientos variables de nómina.</p>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Tipo</th>
+                        <th>Descripción / Constraint</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">CIA_CODCIA</span></td><td>VARCHAR2 (4)</td><td>Código de Compañía (Composite PK/FK)</td></tr>
+                    <tr><td><span class="pk">TNOM_TIPNOM</span></td><td>VARCHAR2 (4)</td><td>Tipo de Nómina</td></tr>
+                    <tr><td>TRAB_FICTRA</td><td>VARCHAR2 (10)</td><td>Ficha del trabajador (FK)</td></tr>
+                    <tr><td>CTO_CODCTO</td><td>NUMBER (4)</td><td>Código de Concepto</td></tr>
+                    <tr><td>MONMOV</td><td>NUMBER (25,9)</td><td>Monto del movimiento</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <!-- Tabla: SPI_USUARIO -->
+        <div class="table-card table-item active" data-name="SPI_USUARIO" style="margin-top: 3rem;">
+            <h3 style="color: var(--accent);">AMCOR.SPI_USUARIO</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Gestión de credenciales y acceso de usuarios.</p>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">ID</span></td><td>VARCHAR2 (60)</td><td>Usuario de acceso</td></tr>
+                    <tr><td>CLAVE_ACCESO</td><td>VARCHAR2 (150)</td><td>Password (Hash)</td></tr>
+                    <tr><td>E_MAIL</td><td>VARCHAR2 (60)</td><td>Correo institucional</td></tr>
+                    <tr><td>ID_PERFIL</td><td>VARCHAR2 (32)</td><td><span class="fk">FK</span> a Perfiles de Seguridad</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla: TA_RAMOS_SEGUROS -->
+        <div class="table-card table-item active" data-name="TA_RAMOS_SEGUROS" style="margin-top: 3rem;">
+            <h3 style="color: var(--accent);">AMCOR.TA_RAMOS_SEGUROS</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Configuración de ramos para seguros HCM y otros.</p>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">ID</span></td><td>VARCHAR2 (16)</td><td>Código del ramo</td></tr>
+                    <tr><td>NOMBRE</td><td>VARCHAR2 (64)</td><td>Descripción del ramo</td></tr>
+                    <tr><td>CLASIFICA</td><td>VARCHAR2 (32)</td><td>Clasificación del tipo de seguro</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabla: SS_SISTEMA -->
+        <div class="table-card table-item active" data-name="SS_SISTEMA" style="margin-top: 3rem;">
+            <h3 style="color: var(--accent);">AMCOR.SS_SISTEMA</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Registro de módulos activos en la suite Infocent.</p>
+            <table class="data-table">
+                <thead>
+                    <tr><th>Campo</th><th>Tipo</th><th>Descripción</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="pk">ID_SISTEMA</span></td><td>VARCHAR2 (10)</td><td>Código del sistema</td></tr>
+                    <tr><td>ID_MODULO</td><td>VARCHAR2 (10)</td><td>Código del módulo</td></tr>
+                    <tr><td>DESCRIPCION</td><td>VARCHAR2 (100)</td><td>Nombre del módulo</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <script>
+        function filterTables() {
+            let input = document.getElementById('searchInput');
+            let filter = input.value.toUpperCase();
+            let items = document.getElementsByClassName('table-item');
+            
+            for (let i = 0; i < items.length; i++) {
+                let name = items[i].getAttribute('data-name');
+                if (name.toUpperCase().indexOf(filter) > -1) {
+                    items[i].style.display = "";
+                } else {
+                    items[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Relaciones - Infocent</title><style>
+:root {
+    --primary: #6366f1; --bg-dark: #0f172a; --card-bg: #1e293b;
+    --text-main: #f8fafc; --text-muted: #94a3b8; --accent: #38bdf8;
+    --border: rgba(255, 255, 255, 0.1);
+}
+* { box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-main); font-size: 0.75rem; margin: 0; scroll-behavior: smooth; line-height: 1.4; }
+.container { max-width: 1400px; margin: 0 auto; padding: 1rem; }
+header { padding: 2rem 1rem; border-bottom: 2px solid var(--primary); text-align: center; background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%); }
+h1 { font-size: 1.6rem; color: var(--accent); margin:0; text-transform: uppercase; letter-spacing: 1px; }
+nav { display: flex; gap: 0.8rem; justify-content: center; padding: 1rem; flex-wrap: wrap; }
+nav a { color: var(--text-main); text-decoration: none; padding: 0.4rem 1rem; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); transition: 0.2s; }
+nav a:hover { background: var(--primary); border-color: var(--primary); transform: translateY(-2px); }
+
+.module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.module-card { background: var(--card-bg); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+.module-card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 10px 30px -10px var(--primary); }
+.module-icon { font-size: 2rem; margin-bottom: 1rem; display: block; }
+.module-card h3 { margin: 0.5rem 0; color: var(--accent); font-size: 1.2rem; }
+.module-card p { color: var(--text-muted); font-size: 0.8rem; }
+.table-count { display: inline-block; margin-top: 1rem; padding: 0.2rem 0.6rem; background: rgba(99,102,241,0.2); color: #a5b4fc; border-radius: 4px; font-weight: bold; }
+
+.search-container { position: sticky; top: 0; background: var(--bg-dark); padding: 1rem 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+.search-box { width: 100%; padding: 0.6rem; background: var(--card-bg); color: white; border: 1px solid var(--border); border-radius: 6px; font-size: 0.8rem; }
+
+.table-card { background: var(--card-bg); border-radius: 8px; padding: 1rem; margin-bottom: 2rem; border: 1px solid var(--border); }
+.table-card:target { border-color: var(--accent); box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+.data-table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+.data-table th { text-align: left; padding: 0.5rem; background: rgba(99, 102, 241, 0.1); color: var(--accent); font-weight: 800; border-bottom: 1px solid var(--border); text-transform: uppercase; font-size: 0.65rem; }
+.data-table td { padding: 0.4rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+.col-name a { color: #facc15; text-decoration: none; border-bottom: 1px dotted #facc15; font-weight: 600; }
+.fk-badge { font-size: 0.6rem; background: #10b981; color: white; padding: 1px 4px; border-radius: 3px; margin-left: 4px; font-weight: bold; }
+.desc-cell { color: var(--text-muted); }
+.ref-by { margin-top: 1rem; padding: 0.8rem; background: rgba(0,0,0,0.25); border-radius: 6px; border: 1px solid var(--border); }
+.ref-links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+.ref-links a { font-size: 0.65rem; color: var(--accent); text-decoration: none; padding: 3px 6px; border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 4px; background: rgba(255,255,255,0.02); }
+.ref-links a:hover { background: var(--accent); color: #000; }
+@media (max-width: 768px) { .module-grid { grid-template-columns: 1fr; } }
+</style></head><body><header><h1>Relaciones y Reglas</h1></header><div class="container"><nav><a href="index.html">Inicio</a></nav><div class="module-card" style="cursor:default;"><h3>Análisis de Integridad</h3><p>El sistema se rige por un esquema de llaves compuestas. La mayoría de las tablas transaccionales (NMM) dependen de las tablas maestras (EO/TA) mediante vínculos FK dinámicos. El portal ahora permite saltar entre módulos de forma transparente mediante enlaces inteligentes.</p></div></div></body></html>
